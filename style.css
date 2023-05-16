@@ -1,0 +1,169 @@
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+
+:root {
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-light-red: hsl(0, 100%, 67%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-off-white: hsl(0, 0%, 94%);
+  --neutral-Light-grey: hsl(0, 0%, 86%);
+  --neutral-smokey-grey: hsl(0, 1%, 44%);
+  --neutral-off-black: hsl(0, 0%, 8%)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  background: var(--neutral-off-white);
+  position: relative;
+}
+
+.app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 650px;
+  height: 450px;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  border-bottom-right-radius: 170px;
+}
+
+form {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  border-bottom: 1px solid var(--neutral-off-white);
+  height: 110px;
+}
+
+form div label {
+  color: var(--neutral-smokey-grey);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-style: normal;
+}
+
+form input {
+  display: block;
+  width: 130px;
+  height: 50px;
+  border: 1px solid var(--neutral-Light-grey);
+  border-radius: 6px;
+  padding: 20px;
+  padding-right: 0px;
+  color: var(--neutral-smokey-grey);
+  font-size: 32px;
+  outline: none;
+  transition: all .3s ease-in-out;
+}
+
+form input:hover {
+  border: 1px solid var(--neutral-off-black) !important;
+}
+
+form button {
+  position: absolute;
+  top: 100%;
+  right: -5%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--primary-purple);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+form button svg {
+  width: 32px;
+  stroke: var(--neutral-off-white);
+  transition: all .3s ease-in-out;
+}
+
+form button:hover svg {
+  width: 35px;
+  color: #fff;
+}
+
+.results {
+  margin-top: 50px;
+  line-height: 60px;
+}
+
+.results .result {
+  color: var(--primary-purple);
+  font-size: 70px;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.results .result-text {
+  color: var(--neutral-off-black);
+  font-size: 70px;
+}
+
+.field p {
+  color: var(--primary-light-red);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 11px;
+  margin-top: 5px;
+  display: none;
+}
+
+/* responsive */
+@media screen and (max-width: 375px) {
+  .container {
+    width: 375px;
+    height: 100vh;
+  }
+
+  .app {
+    width: 350px;
+    height: 500px;
+    top: 50%;
+    padding: 20px;
+  }
+
+  form {
+    gap: 10px;
+    height: 140px;
+  }
+
+  form input {
+    width: 97px;
+    font-size: 24px;
+  }
+
+  form button {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+  }
+
+  .results .result {
+    font-size: 45px;
+  }
+
+  .results .result-text {
+    font-size: 45px;
+  }
+}
